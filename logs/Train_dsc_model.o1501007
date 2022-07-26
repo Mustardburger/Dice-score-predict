@@ -1,0 +1,38 @@
+--------------------------------------------------------------
+Begin Slurm Prologue Thu Jun 30 19:53:17 CDT 2022 1656636797
+Job ID:		1501007
+Username:	phuc
+Partition:	gpu
+End Slurm Prologue Thu Jun 30 19:53:17 CDT 2022 1656636797
+--------------------------------------------------------------
+/mnt/beegfs/scratch/phuc/seg-quality-control/experiments/model_4/dices_train.pkl
+/model_4/dices_val.pkl
+--------------------------------------------------------------
+Begin Slurm Epilogue Thu Jun 30 19:53:25 CDT 2022 1656636805
+Name                : Train_dsc_model
+User                : phuc
+Partition           : gpu
+Nodes               : gpu07
+Cores               : 4
+State               : FAILED
+Submit              : 2022-06-30T19:53:17
+Start               : 2022-06-30T19:53:17
+End                 : 2022-06-30T19:53:23
+Reserved Walltime   : 17:00:00
+Used Walltime       : 00:00:06
+Used CPU Time       : 00:00:02
+% User (Computation): 78.92%
+% System (I/O)      :  0.00%
+Mem Reserved        : 16G
+Max Mem Used        : 1.28M (1339392.0)
+Max Disk Write      : 0.00  (0.0)
+Max Disk Read       : 0.00  (0.0)
+Max-Mem-Used Node   : gpu07
+Max-Disk-Write Node : gpu07
+Max-Disk-Read Node  : gpu07
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    GPU Performance Statistics
+--------------------------------------------------------------
+GPU Model: Tesla V100-PCIE-32GB 
+End Slurm Epilogue Thu Jun 30 19:53:25 CDT 2022 1656636805
+--------------------------------------------------------------

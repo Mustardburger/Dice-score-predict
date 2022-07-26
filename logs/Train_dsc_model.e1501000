@@ -1,0 +1,9 @@
+/var/spool/slurm/d/job1501000/slurm_script: line 22: activate: No such file or directory
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/phuc/my-code/dsc-predict/finetuning.py", line 56, in <module>
+    val_data = FinetuneDiceDataset(dir_dict["IMG_VAL_DIR"], dir_dict["SEG_VAL_DIR"], dir_dict["DICE_VAL_DIR"], img_transform=data_transform, ratio=parser_args.data_val_ratio, subset_dir=dir_dict["SUBSET_VAL_DIR"])
+  File "/mnt/beegfs/home/phuc/my-code/dsc-predict/dataset.py", line 125, in __init__
+    super().__init__(mri_img_dir, seg_dir, dice_scores, img_transform="default", ratio=ratio, subset_dir=subset_dir)
+  File "/mnt/beegfs/home/phuc/my-code/dsc-predict/dataset.py", line 36, in __init__
+    with open(dice_scores, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/model_4/dices_val.pkl'

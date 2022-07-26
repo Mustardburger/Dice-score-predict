@@ -1,0 +1,11 @@
+/var/spool/slurm/d/job1500950/slurm_script: line 22: activate: No such file or directory
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/phuc/my-code/dsc-predict/finetuning.py", line 55, in <module>
+    training_data = FinetuneDiceDataset(dir_dict["IMG_TRAIN_DIR"], dir_dict["SEG_TRAIN_DIR"], dir_dict["DICE_TRAIN_DIR"], img_transform=data_transform, ratio=parser_args.data_train_ratio, subset_dir=dir_dict["SUBSET_TRAIN_DIR"])
+  File "/mnt/beegfs/home/phuc/my-code/dsc-predict/dataset.py", line 124, in __init__
+    super().__init__(mri_img_dir, seg_dir, dice_scores, img_transform="default", ratio=ratio, subset_dir=subset_dir)
+  File "/mnt/beegfs/home/phuc/my-code/dsc-predict/dataset.py", line 45, in __init__
+    self._check_correct_idx()
+  File "/mnt/beegfs/home/phuc/my-code/dsc-predict/dataset.py", line 117, in _check_correct_idx
+    assert self.dice_scores[name] == dice
+AssertionError

@@ -1,0 +1,8 @@
+Run 1 and 2 were run on model-6 dataset
+Run 3 were run on model-4 dataset
+Run 4 were run on model-4 dataset using pretrained ResNet-50 and modified Dice
+Run 5 were run on model-4 dataset using modified Dice
+Run 6 were run on model-4 dataset using pretrained ResNet-50, modified Dice and modalities at ind=0,1 were dropped
+Run 7 were run on model-4 dataset using pretrained ResNet-50, modified Dice and modalities at ind=0,2 were dropped
+Run 8 were run on model-4 dataset using pretrained ResNet-50, modified Dice and modalities at ind=1,2 were dropped
+Run 9 were run on model-4 dataset using pretrained ResNet-50 and modified Dice

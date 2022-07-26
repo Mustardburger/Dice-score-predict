@@ -1,0 +1,25 @@
+#!/bin/bash
+######## --send email ########
+#SBATCH --mail-type=begin
+#SBATCH --mail-type=end
+#SBATCH --mail-user=phuc@wustl.edu
+
+######## Job Name: Test_Job ########
+#SBATCH -J Train_dsc_model
+#SBATCH -o logs/Train_dsc_model.o%j
+#SBATCH -e logs/Train_dsc_model.e%j
+######## Number of nodes: 1 ########
+#SBATCH -N 1
+#SBATCH -n 4
+#SBATCH --gres gpu:1,vmem:32gb:1
+#SBATCH --mem 16G 
+#SBATCH -t 17:00:00
+ 
+cd /mnt/beegfs/home/phuc/my-code/dsc-predict
+
+######## Load module environment required for the job ########
+module load cuda/10.2
+source activate pytorch
+
+######## Run the job ########
+python finetuning.py --data_root /mnt/beegfs/scratch/phuc/seg-quality-control/experiments --data_id model_4 --data_train_ratio 1.0 --data_val_ratio 1.0 --num_in_channels 4 --num_epoch 150 --pretrained_model resnet50 --data_transform norm_no_crop --modality_dropout_rate 0.0

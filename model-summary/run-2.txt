@@ -1,0 +1,295 @@
+-------------------------------------
+Structure of model: 
+ResNet(
+  (conv1): Conv2d(6, 32, kernel_size=(3, 3), stride=(1, 1))
+  (batch_norm1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu): ReLU()
+  (res_block1): ResNetBlock(
+    (conv1): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (res_block2): ResNetBlock(
+    (conv1): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (res_block3): ResNetBlock(
+    (conv1): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (down_conv1): AvgPool2d(kernel_size=2, stride=2, padding=0)
+  (res_block4): ResNetBlock(
+    (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (res_block5): ResNetBlock(
+    (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (res_block6): ResNetBlock(
+    (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (res_block7): ResNetBlock(
+    (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (res_block8): ResNetBlock(
+    (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (res_block9): ResNetBlock(
+    (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (down_conv2): AvgPool2d(kernel_size=2, stride=2, padding=0)
+  (res_block10): ResNetBlock(
+    (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (res_block11): ResNetBlock(
+    (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (res_block12): ResNetBlock(
+    (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (res_block13): ResNetBlock(
+    (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (res_block14): ResNetBlock(
+    (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (res_block15): ResNetBlock(
+    (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (down_conv3): AvgPool2d(kernel_size=2, stride=2, padding=0)
+  (res_block16): ResNetBlock(
+    (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (res_block17): ResNetBlock(
+    (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (res_block18): ResNetBlock(
+    (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (down_conv4): AvgPool2d(kernel_size=2, stride=2, padding=0)
+  (avg_pool): AdaptiveAvgPool2d(output_size=(1, 1))
+  (dense): Linear(in_features=512, out_features=1, bias=True)
+)
+-------------------------------------
+
+Weights of model: 
+conv1.weight: 1728
+conv1.bias: 32
+batch_norm1.weight: 32
+batch_norm1.bias: 32
+res_block1.conv1.weight: 9216
+res_block1.conv1.bias: 32
+res_block1.batch_norm1.weight: 32
+res_block1.batch_norm1.bias: 32
+res_block1.conv2.weight: 9216
+res_block1.conv2.bias: 32
+res_block1.batch_norm2.weight: 32
+res_block1.batch_norm2.bias: 32
+res_block2.conv1.weight: 9216
+res_block2.conv1.bias: 32
+res_block2.batch_norm1.weight: 32
+res_block2.batch_norm1.bias: 32
+res_block2.conv2.weight: 9216
+res_block2.conv2.bias: 32
+res_block2.batch_norm2.weight: 32
+res_block2.batch_norm2.bias: 32
+res_block3.conv1.weight: 18432
+res_block3.conv1.bias: 64
+res_block3.batch_norm1.weight: 64
+res_block3.batch_norm1.bias: 64
+res_block3.conv2.weight: 36864
+res_block3.conv2.bias: 64
+res_block3.batch_norm2.weight: 64
+res_block3.batch_norm2.bias: 64
+res_block4.conv1.weight: 36864
+res_block4.conv1.bias: 64
+res_block4.batch_norm1.weight: 64
+res_block4.batch_norm1.bias: 64
+res_block4.conv2.weight: 36864
+res_block4.conv2.bias: 64
+res_block4.batch_norm2.weight: 64
+res_block4.batch_norm2.bias: 64
+res_block5.conv1.weight: 36864
+res_block5.conv1.bias: 64
+res_block5.batch_norm1.weight: 64
+res_block5.batch_norm1.bias: 64
+res_block5.conv2.weight: 36864
+res_block5.conv2.bias: 64
+res_block5.batch_norm2.weight: 64
+res_block5.batch_norm2.bias: 64
+res_block6.conv1.weight: 36864
+res_block6.conv1.bias: 64
+res_block6.batch_norm1.weight: 64
+res_block6.batch_norm1.bias: 64
+res_block6.conv2.weight: 36864
+res_block6.conv2.bias: 64
+res_block6.batch_norm2.weight: 64
+res_block6.batch_norm2.bias: 64
+res_block7.conv1.weight: 36864
+res_block7.conv1.bias: 64
+res_block7.batch_norm1.weight: 64
+res_block7.batch_norm1.bias: 64
+res_block7.conv2.weight: 36864
+res_block7.conv2.bias: 64
+res_block7.batch_norm2.weight: 64
+res_block7.batch_norm2.bias: 64
+res_block8.conv1.weight: 36864
+res_block8.conv1.bias: 64
+res_block8.batch_norm1.weight: 64
+res_block8.batch_norm1.bias: 64
+res_block8.conv2.weight: 36864
+res_block8.conv2.bias: 64
+res_block8.batch_norm2.weight: 64
+res_block8.batch_norm2.bias: 64
+res_block9.conv1.weight: 73728
+res_block9.conv1.bias: 128
+res_block9.batch_norm1.weight: 128
+res_block9.batch_norm1.bias: 128
+res_block9.conv2.weight: 147456
+res_block9.conv2.bias: 128
+res_block9.batch_norm2.weight: 128
+res_block9.batch_norm2.bias: 128
+res_block10.conv1.weight: 147456
+res_block10.conv1.bias: 128
+res_block10.batch_norm1.weight: 128
+res_block10.batch_norm1.bias: 128
+res_block10.conv2.weight: 147456
+res_block10.conv2.bias: 128
+res_block10.batch_norm2.weight: 128
+res_block10.batch_norm2.bias: 128
+res_block11.conv1.weight: 147456
+res_block11.conv1.bias: 128
+res_block11.batch_norm1.weight: 128
+res_block11.batch_norm1.bias: 128
+res_block11.conv2.weight: 147456
+res_block11.conv2.bias: 128
+res_block11.batch_norm2.weight: 128
+res_block11.batch_norm2.bias: 128
+res_block12.conv1.weight: 147456
+res_block12.conv1.bias: 128
+res_block12.batch_norm1.weight: 128
+res_block12.batch_norm1.bias: 128
+res_block12.conv2.weight: 147456
+res_block12.conv2.bias: 128
+res_block12.batch_norm2.weight: 128
+res_block12.batch_norm2.bias: 128
+res_block13.conv1.weight: 147456
+res_block13.conv1.bias: 128
+res_block13.batch_norm1.weight: 128
+res_block13.batch_norm1.bias: 128
+res_block13.conv2.weight: 147456
+res_block13.conv2.bias: 128
+res_block13.batch_norm2.weight: 128
+res_block13.batch_norm2.bias: 128
+res_block14.conv1.weight: 147456
+res_block14.conv1.bias: 128
+res_block14.batch_norm1.weight: 128
+res_block14.batch_norm1.bias: 128
+res_block14.conv2.weight: 147456
+res_block14.conv2.bias: 128
+res_block14.batch_norm2.weight: 128
+res_block14.batch_norm2.bias: 128
+res_block15.conv1.weight: 294912
+res_block15.conv1.bias: 256
+res_block15.batch_norm1.weight: 256
+res_block15.batch_norm1.bias: 256
+res_block15.conv2.weight: 589824
+res_block15.conv2.bias: 256
+res_block15.batch_norm2.weight: 256
+res_block15.batch_norm2.bias: 256
+res_block16.conv1.weight: 589824
+res_block16.conv1.bias: 256
+res_block16.batch_norm1.weight: 256
+res_block16.batch_norm1.bias: 256
+res_block16.conv2.weight: 589824
+res_block16.conv2.bias: 256
+res_block16.batch_norm2.weight: 256
+res_block16.batch_norm2.bias: 256
+res_block17.conv1.weight: 589824
+res_block17.conv1.bias: 256
+res_block17.batch_norm1.weight: 256
+res_block17.batch_norm1.bias: 256
+res_block17.conv2.weight: 589824
+res_block17.conv2.bias: 256
+res_block17.batch_norm2.weight: 256
+res_block17.batch_norm2.bias: 256
+res_block18.conv1.weight: 1179648
+res_block18.conv1.bias: 512
+res_block18.batch_norm1.weight: 512
+res_block18.batch_norm1.bias: 512
+res_block18.conv2.weight: 2359296
+res_block18.conv2.bias: 512
+res_block18.batch_norm2.weight: 512
+res_block18.batch_norm2.bias: 512
+dense.weight: 512
+dense.bias: 1
+-------------------------------------
+
+Total number of params: 8956833

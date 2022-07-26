@@ -1,0 +1,2 @@
+/var/spool/slurm/d/job1446291/slurm_script: line 22: activate: No such file or directory
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [04:39<00:00, 279.29s/it]100%|██████████| 1/1 [04:39<00:00, 279.29s/it]

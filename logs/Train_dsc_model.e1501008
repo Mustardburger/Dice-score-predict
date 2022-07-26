@@ -1,0 +1,17 @@
+/var/spool/slurm/d/job1501008/slurm_script: line 22: activate: No such file or directory
+Using cache found in /home/phuc/.cache/torch/hub/pytorch_vision_v0.10.0
+  0%|          | 0/1 [00:00<?, ?it/s]  0%|          | 0/1 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/phuc/my-code/dsc-predict/finetuning.py", line 83, in <module>
+    for data in train_dataloader:
+  File "/home/phuc/anaconda3/envs/pytorch-env/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 530, in __next__
+    data = self._next_data()
+  File "/home/phuc/anaconda3/envs/pytorch-env/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 570, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/phuc/anaconda3/envs/pytorch-env/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/phuc/anaconda3/envs/pytorch-env/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/mnt/beegfs/home/phuc/my-code/dsc-predict/dataset.py", line 135, in __getitem__
+    assert (torch.max(seg) <= 1.0) and (torch.min(seg) >= 0.0)
+AssertionError

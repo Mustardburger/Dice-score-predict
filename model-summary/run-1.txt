@@ -1,0 +1,93 @@
+-------------------------------------
+Structure of model: 
+ResNet(
+  (conv1): Conv2d(6, 32, kernel_size=(3, 3), stride=(1, 1))
+  (batch_norm1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu): ReLU()
+  (res_block1): ResNetBlock(
+    (conv1): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (down_conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(2, 2))
+  (res_block2): ResNetBlock(
+    (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (down_conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), padding=(2, 2))
+  (res_block3): ResNetBlock(
+    (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (down_conv3): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2), padding=(2, 2))
+  (res_block4): ResNetBlock(
+    (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU()
+    (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (batch_norm2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (down_conv4): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2), padding=(2, 2))
+  (avg_pool): AdaptiveAvgPool2d(output_size=(1, 1))
+  (dense): Linear(in_features=512, out_features=1, bias=True)
+)
+-------------------------------------
+
+Weights of model: 
+conv1.weight: 1728
+conv1.bias: 32
+batch_norm1.weight: 32
+batch_norm1.bias: 32
+res_block1.conv1.weight: 18432
+res_block1.conv1.bias: 64
+res_block1.batch_norm1.weight: 64
+res_block1.batch_norm1.bias: 64
+res_block1.conv2.weight: 36864
+res_block1.conv2.bias: 64
+res_block1.batch_norm2.weight: 64
+res_block1.batch_norm2.bias: 64
+down_conv1.weight: 36864
+down_conv1.bias: 64
+res_block2.conv1.weight: 73728
+res_block2.conv1.bias: 128
+res_block2.batch_norm1.weight: 128
+res_block2.batch_norm1.bias: 128
+res_block2.conv2.weight: 147456
+res_block2.conv2.bias: 128
+res_block2.batch_norm2.weight: 128
+res_block2.batch_norm2.bias: 128
+down_conv2.weight: 147456
+down_conv2.bias: 128
+res_block3.conv1.weight: 294912
+res_block3.conv1.bias: 256
+res_block3.batch_norm1.weight: 256
+res_block3.batch_norm1.bias: 256
+res_block3.conv2.weight: 589824
+res_block3.conv2.bias: 256
+res_block3.batch_norm2.weight: 256
+res_block3.batch_norm2.bias: 256
+down_conv3.weight: 589824
+down_conv3.bias: 256
+res_block4.conv1.weight: 1179648
+res_block4.conv1.bias: 512
+res_block4.batch_norm1.weight: 512
+res_block4.batch_norm1.bias: 512
+res_block4.conv2.weight: 2359296
+res_block4.conv2.bias: 512
+res_block4.batch_norm2.weight: 512
+res_block4.batch_norm2.bias: 512
+down_conv4.weight: 2359296
+down_conv4.bias: 512
+dense.weight: 512
+dense.bias: 1
+-------------------------------------
+
+Total number of params: 7842657

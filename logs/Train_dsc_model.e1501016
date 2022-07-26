@@ -1,0 +1,7 @@
+/var/spool/slurm/d/job1501016/slurm_script: line 22: activate: No such file or directory
+Using cache found in /home/phuc/.cache/torch/hub/pytorch_vision_v0.10.0
+  0%|          | 0/1 [00:00<?, ?it/s]  0%|          | 0/1 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/phuc/my-code/dsc-predict/finetuning.py", line 96, in <module>
+    input_tensor = torch.cat((imgs, segs), dim=1).float()
+RuntimeError: Tensors must have same number of dimensions: got 5 and 4

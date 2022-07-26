@@ -1,0 +1,36 @@
+--------------------------------------------------------------
+Begin Slurm Prologue Thu Jun 30 16:57:53 CDT 2022 1656626273
+Job ID:		1495362
+Username:	phuc
+Partition:	gpu
+End Slurm Prologue Thu Jun 30 16:57:53 CDT 2022 1656626273
+--------------------------------------------------------------
+--------------------------------------------------------------
+Begin Slurm Epilogue Thu Jun 30 16:58:03 CDT 2022 1656626283
+Name                : Train_dsc_model
+User                : phuc
+Partition           : gpu
+Nodes               : gpu07
+Cores               : 4
+State               : FAILED
+Submit              : 2022-06-30T16:57:51
+Start               : 2022-06-30T16:57:53
+End                 : 2022-06-30T16:58:00
+Reserved Walltime   : 17:00:00
+Used Walltime       : 00:00:07
+Used CPU Time       : 00:00:02
+% User (Computation): 75.35%
+% System (I/O)      :  0.00%
+Mem Reserved        : 16G
+Max Mem Used        : 1.27M (1335296.0)
+Max Disk Write      : 0.00  (0.0)
+Max Disk Read       : 0.00  (0.0)
+Max-Mem-Used Node   : gpu07
+Max-Disk-Write Node : gpu07
+Max-Disk-Read Node  : gpu07
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    GPU Performance Statistics
+--------------------------------------------------------------
+GPU Model: Tesla V100-PCIE-32GB 
+End Slurm Epilogue Thu Jun 30 16:58:03 CDT 2022 1656626283
+--------------------------------------------------------------

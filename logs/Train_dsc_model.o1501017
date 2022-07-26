@@ -1,0 +1,42 @@
+--------------------------------------------------------------
+Begin Slurm Prologue Thu Jun 30 20:07:16 CDT 2022 1656637636
+Job ID:		1501017
+Username:	phuc
+Partition:	gpu
+End Slurm Prologue Thu Jun 30 20:07:16 CDT 2022 1656637636
+--------------------------------------------------------------
+Done loading data
+Done loading model
+Training starting: 
+Train loss after 1 epochs: 0.080
+Val loss after 1 epochs: 1.880
+Model id 0 has the lowest val loss
+--------------------------------------------------------------
+Begin Slurm Epilogue Thu Jun 30 20:07:35 CDT 2022 1656637655
+Name                : Train_dsc_model
+User                : phuc
+Partition           : gpu
+Nodes               : gpu07
+Cores               : 4
+State               : COMPLETED
+Submit              : 2022-06-30T20:07:16
+Start               : 2022-06-30T20:07:16
+End                 : 2022-06-30T20:07:33
+Reserved Walltime   : 17:00:00
+Used Walltime       : 00:00:17
+Used CPU Time       : 00:00:25
+% User (Computation): 43.20%
+% System (I/O)      : 56.80%
+Mem Reserved        : 16G
+Max Mem Used        : 1.28M (1339392.0)
+Max Disk Write      : 0.00  (0.0)
+Max Disk Read       : 0.00  (0.0)
+Max-Mem-Used Node   : gpu07
+Max-Disk-Write Node : gpu07
+Max-Disk-Read Node  : gpu07
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    GPU Performance Statistics
+--------------------------------------------------------------
+GPU Model: Tesla V100-PCIE-32GB 
+End Slurm Epilogue Thu Jun 30 20:07:35 CDT 2022 1656637655
+--------------------------------------------------------------

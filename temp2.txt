@@ -1,0 +1,269 @@
+-------------------------------------
+Structure of model: 
+ResNet3D(
+  (conv1): Conv3d(4, 64, kernel_size=(7, 7, 7), stride=(2, 2, 2), padding=(3, 3, 3), bias=False)
+  (bn1): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu): ReLU()
+  (maxpool): MaxPool3d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (layer_list): Sequential(
+    (0): ResNetLayer3D(
+      (block_list): Sequential(
+        (0): ResNetBlock3D(
+          (conv1): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+          (bn1): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU()
+          (conv2): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+          (bn2): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (1): ResNetBlock3D(
+          (conv1): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+          (bn1): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU()
+          (conv2): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+          (bn2): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (2): ResNetBlock3D(
+          (conv1): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+          (bn1): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU()
+          (conv2): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+          (bn2): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+    )
+    (1): ResNetLayer3D(
+      (block_list): Sequential(
+        (0): ResNetBlock3D(
+          (conv1): Conv3d(64, 128, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1), bias=False)
+          (bn1): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU()
+          (conv2): Conv3d(128, 128, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+          (bn2): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (downsample): Sequential(
+            (0): Conv3d(64, 128, kernel_size=(1, 1, 1), stride=(2, 2, 2), bias=False)
+            (1): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (1): ResNetBlock3D(
+          (conv1): Conv3d(128, 128, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+          (bn1): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU()
+          (conv2): Conv3d(128, 128, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+          (bn2): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (2): ResNetBlock3D(
+          (conv1): Conv3d(128, 128, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+          (bn1): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU()
+          (conv2): Conv3d(128, 128, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+          (bn2): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (3): ResNetBlock3D(
+          (conv1): Conv3d(128, 128, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+          (bn1): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU()
+          (conv2): Conv3d(128, 128, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+          (bn2): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+    )
+    (2): ResNetLayer3D(
+      (block_list): Sequential(
+        (0): ResNetBlock3D(
+          (conv1): Conv3d(128, 256, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1), bias=False)
+          (bn1): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU()
+          (conv2): Conv3d(256, 256, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+          (bn2): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (downsample): Sequential(
+            (0): Conv3d(128, 256, kernel_size=(1, 1, 1), stride=(2, 2, 2), bias=False)
+            (1): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (1): ResNetBlock3D(
+          (conv1): Conv3d(256, 256, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+          (bn1): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU()
+          (conv2): Conv3d(256, 256, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+          (bn2): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (2): ResNetBlock3D(
+          (conv1): Conv3d(256, 256, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+          (bn1): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU()
+          (conv2): Conv3d(256, 256, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+          (bn2): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (3): ResNetBlock3D(
+          (conv1): Conv3d(256, 256, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+          (bn1): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU()
+          (conv2): Conv3d(256, 256, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+          (bn2): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (4): ResNetBlock3D(
+          (conv1): Conv3d(256, 256, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+          (bn1): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU()
+          (conv2): Conv3d(256, 256, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+          (bn2): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (5): ResNetBlock3D(
+          (conv1): Conv3d(256, 256, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+          (bn1): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU()
+          (conv2): Conv3d(256, 256, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+          (bn2): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+    )
+    (3): ResNetLayer3D(
+      (block_list): Sequential(
+        (0): ResNetBlock3D(
+          (conv1): Conv3d(256, 512, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1), bias=False)
+          (bn1): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU()
+          (conv2): Conv3d(512, 512, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+          (bn2): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (downsample): Sequential(
+            (0): Conv3d(256, 512, kernel_size=(1, 1, 1), stride=(2, 2, 2), bias=False)
+            (1): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (1): ResNetBlock3D(
+          (conv1): Conv3d(512, 512, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+          (bn1): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU()
+          (conv2): Conv3d(512, 512, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+          (bn2): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (2): ResNetBlock3D(
+          (conv1): Conv3d(512, 512, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+          (bn1): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU()
+          (conv2): Conv3d(512, 512, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+          (bn2): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+    )
+  )
+  (avgpool): AdaptiveAvgPool3d(output_size=(1, 1, 1))
+  (linear): Linear(in_features=2048, out_features=1, bias=True)
+  (activation): Sigmoid()
+)
+-------------------------------------
+
+Weights of model: 
+conv1.weight: 87808
+bn1.weight: 64
+bn1.bias: 64
+layer_list.0.block_list.0.conv1.weight: 110592
+layer_list.0.block_list.0.bn1.weight: 64
+layer_list.0.block_list.0.bn1.bias: 64
+layer_list.0.block_list.0.conv2.weight: 110592
+layer_list.0.block_list.0.bn2.weight: 64
+layer_list.0.block_list.0.bn2.bias: 64
+layer_list.0.block_list.1.conv1.weight: 110592
+layer_list.0.block_list.1.bn1.weight: 64
+layer_list.0.block_list.1.bn1.bias: 64
+layer_list.0.block_list.1.conv2.weight: 110592
+layer_list.0.block_list.1.bn2.weight: 64
+layer_list.0.block_list.1.bn2.bias: 64
+layer_list.0.block_list.2.conv1.weight: 110592
+layer_list.0.block_list.2.bn1.weight: 64
+layer_list.0.block_list.2.bn1.bias: 64
+layer_list.0.block_list.2.conv2.weight: 110592
+layer_list.0.block_list.2.bn2.weight: 64
+layer_list.0.block_list.2.bn2.bias: 64
+layer_list.1.block_list.0.conv1.weight: 221184
+layer_list.1.block_list.0.bn1.weight: 128
+layer_list.1.block_list.0.bn1.bias: 128
+layer_list.1.block_list.0.conv2.weight: 442368
+layer_list.1.block_list.0.bn2.weight: 128
+layer_list.1.block_list.0.bn2.bias: 128
+layer_list.1.block_list.0.downsample.0.weight: 8192
+layer_list.1.block_list.0.downsample.1.weight: 128
+layer_list.1.block_list.0.downsample.1.bias: 128
+layer_list.1.block_list.1.conv1.weight: 442368
+layer_list.1.block_list.1.bn1.weight: 128
+layer_list.1.block_list.1.bn1.bias: 128
+layer_list.1.block_list.1.conv2.weight: 442368
+layer_list.1.block_list.1.bn2.weight: 128
+layer_list.1.block_list.1.bn2.bias: 128
+layer_list.1.block_list.2.conv1.weight: 442368
+layer_list.1.block_list.2.bn1.weight: 128
+layer_list.1.block_list.2.bn1.bias: 128
+layer_list.1.block_list.2.conv2.weight: 442368
+layer_list.1.block_list.2.bn2.weight: 128
+layer_list.1.block_list.2.bn2.bias: 128
+layer_list.1.block_list.3.conv1.weight: 442368
+layer_list.1.block_list.3.bn1.weight: 128
+layer_list.1.block_list.3.bn1.bias: 128
+layer_list.1.block_list.3.conv2.weight: 442368
+layer_list.1.block_list.3.bn2.weight: 128
+layer_list.1.block_list.3.bn2.bias: 128
+layer_list.2.block_list.0.conv1.weight: 884736
+layer_list.2.block_list.0.bn1.weight: 256
+layer_list.2.block_list.0.bn1.bias: 256
+layer_list.2.block_list.0.conv2.weight: 1769472
+layer_list.2.block_list.0.bn2.weight: 256
+layer_list.2.block_list.0.bn2.bias: 256
+layer_list.2.block_list.0.downsample.0.weight: 32768
+layer_list.2.block_list.0.downsample.1.weight: 256
+layer_list.2.block_list.0.downsample.1.bias: 256
+layer_list.2.block_list.1.conv1.weight: 1769472
+layer_list.2.block_list.1.bn1.weight: 256
+layer_list.2.block_list.1.bn1.bias: 256
+layer_list.2.block_list.1.conv2.weight: 1769472
+layer_list.2.block_list.1.bn2.weight: 256
+layer_list.2.block_list.1.bn2.bias: 256
+layer_list.2.block_list.2.conv1.weight: 1769472
+layer_list.2.block_list.2.bn1.weight: 256
+layer_list.2.block_list.2.bn1.bias: 256
+layer_list.2.block_list.2.conv2.weight: 1769472
+layer_list.2.block_list.2.bn2.weight: 256
+layer_list.2.block_list.2.bn2.bias: 256
+layer_list.2.block_list.3.conv1.weight: 1769472
+layer_list.2.block_list.3.bn1.weight: 256
+layer_list.2.block_list.3.bn1.bias: 256
+layer_list.2.block_list.3.conv2.weight: 1769472
+layer_list.2.block_list.3.bn2.weight: 256
+layer_list.2.block_list.3.bn2.bias: 256
+layer_list.2.block_list.4.conv1.weight: 1769472
+layer_list.2.block_list.4.bn1.weight: 256
+layer_list.2.block_list.4.bn1.bias: 256
+layer_list.2.block_list.4.conv2.weight: 1769472
+layer_list.2.block_list.4.bn2.weight: 256
+layer_list.2.block_list.4.bn2.bias: 256
+layer_list.2.block_list.5.conv1.weight: 1769472
+layer_list.2.block_list.5.bn1.weight: 256
+layer_list.2.block_list.5.bn1.bias: 256
+layer_list.2.block_list.5.conv2.weight: 1769472
+layer_list.2.block_list.5.bn2.weight: 256
+layer_list.2.block_list.5.bn2.bias: 256
+layer_list.3.block_list.0.conv1.weight: 3538944
+layer_list.3.block_list.0.bn1.weight: 512
+layer_list.3.block_list.0.bn1.bias: 512
+layer_list.3.block_list.0.conv2.weight: 7077888
+layer_list.3.block_list.0.bn2.weight: 512
+layer_list.3.block_list.0.bn2.bias: 512
+layer_list.3.block_list.0.downsample.0.weight: 131072
+layer_list.3.block_list.0.downsample.1.weight: 512
+layer_list.3.block_list.0.downsample.1.bias: 512
+layer_list.3.block_list.1.conv1.weight: 7077888
+layer_list.3.block_list.1.bn1.weight: 512
+layer_list.3.block_list.1.bn1.bias: 512
+layer_list.3.block_list.1.conv2.weight: 7077888
+layer_list.3.block_list.1.bn2.weight: 512
+layer_list.3.block_list.1.bn2.bias: 512
+layer_list.3.block_list.2.conv1.weight: 7077888
+layer_list.3.block_list.2.bn1.weight: 512
+layer_list.3.block_list.2.bn1.bias: 512
+layer_list.3.block_list.2.conv2.weight: 7077888
+layer_list.3.block_list.2.bn2.weight: 512
+layer_list.3.block_list.2.bn2.bias: 512
+linear.weight: 2048
+linear.bias: 1
+-------------------------------------
+
+Total number of params: 63537537

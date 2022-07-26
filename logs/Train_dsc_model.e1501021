@@ -1,0 +1,7 @@
+/var/spool/slurm/d/job1501021/slurm_script: line 22: activate: No such file or directory
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/phuc/my-code/dsc-predict/finetuning.py", line 26, in <module>
+    parser_args = parser.get_hyperparameters()
+  File "/mnt/beegfs/home/phuc/my-code/dsc-predict/hyperparams.py", line 46, in get_hyperparameters
+    self.run_id = f"run-{len(os.listdir(self.save_dir))+1}"
+FileNotFoundError: [Errno 2] No such file or directory: '/mnt/beegfs/home/phuc/my-code/dsc-predict/hyperparameters'

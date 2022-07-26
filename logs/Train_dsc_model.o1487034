@@ -1,0 +1,340 @@
+--------------------------------------------------------------
+Begin Slurm Prologue Wed Jun 29 13:56:42 CDT 2022 1656529002
+Job ID:		1487034
+Username:	phuc
+Partition:	gpu
+End Slurm Prologue Wed Jun 29 13:56:42 CDT 2022 1656529002
+--------------------------------------------------------------
+Done loading data
+Done loading model
+Training starting: 
+Train loss after 1 epochs: 0.038
+Val loss after 1 epochs: 0.044
+Train loss after 2 epochs: 0.024
+Val loss after 2 epochs: 0.104
+Train loss after 3 epochs: 0.022
+Val loss after 3 epochs: 0.093
+Train loss after 4 epochs: 0.021
+Val loss after 4 epochs: 0.022
+Train loss after 5 epochs: 0.021
+Val loss after 5 epochs: 0.031
+Train loss after 6 epochs: 0.020
+Val loss after 6 epochs: 0.028
+Train loss after 7 epochs: 0.020
+Val loss after 7 epochs: 0.024
+Train loss after 8 epochs: 0.020
+Val loss after 8 epochs: 0.019
+Train loss after 9 epochs: 0.019
+Val loss after 9 epochs: 0.019
+Train loss after 10 epochs: 0.019
+Val loss after 10 epochs: 0.023
+Train loss after 11 epochs: 0.019
+Val loss after 11 epochs: 0.020
+Train loss after 12 epochs: 0.103
+Val loss after 12 epochs: 0.030
+Train loss after 13 epochs: 0.028
+Val loss after 13 epochs: 0.029
+Train loss after 14 epochs: 0.028
+Val loss after 14 epochs: 0.028
+Train loss after 15 epochs: 0.027
+Val loss after 15 epochs: 0.030
+Train loss after 16 epochs: 0.027
+Val loss after 16 epochs: 0.028
+Train loss after 17 epochs: 0.028
+Val loss after 17 epochs: 0.038
+Train loss after 18 epochs: 0.027
+Val loss after 18 epochs: 0.058
+Train loss after 19 epochs: 0.026
+Val loss after 19 epochs: 0.141
+Train loss after 20 epochs: 0.026
+Val loss after 20 epochs: 0.030
+Train loss after 21 epochs: 0.025
+Val loss after 21 epochs: 0.033
+Train loss after 22 epochs: 0.023
+Val loss after 22 epochs: 0.034
+Train loss after 23 epochs: 0.022
+Val loss after 23 epochs: 0.022
+Train loss after 24 epochs: 0.033
+Val loss after 24 epochs: 0.066
+Train loss after 25 epochs: 0.029
+Val loss after 25 epochs: 0.029
+Train loss after 26 epochs: 0.026
+Val loss after 26 epochs: 0.135
+Train loss after 27 epochs: 0.023
+Val loss after 27 epochs: 0.981
+Train loss after 28 epochs: 0.021
+Val loss after 28 epochs: 0.028
+Train loss after 29 epochs: 0.021
+Val loss after 29 epochs: 0.645
+Train loss after 30 epochs: 0.020
+Val loss after 30 epochs: 0.347
+Train loss after 31 epochs: 0.023
+Val loss after 31 epochs: 0.536
+Train loss after 32 epochs: 0.020
+Val loss after 32 epochs: 0.020
+Train loss after 33 epochs: 0.019
+Val loss after 33 epochs: 0.021
+Train loss after 34 epochs: 0.020
+Val loss after 34 epochs: 0.165
+Train loss after 35 epochs: 0.020
+Val loss after 35 epochs: 0.025
+Train loss after 36 epochs: 0.019
+Val loss after 36 epochs: 0.024
+Train loss after 37 epochs: 0.018
+Val loss after 37 epochs: 0.051
+Train loss after 38 epochs: 0.018
+Val loss after 38 epochs: 0.021
+Train loss after 39 epochs: 0.018
+Val loss after 39 epochs: 0.019
+Train loss after 40 epochs: 0.019
+Val loss after 40 epochs: 0.018
+Train loss after 41 epochs: 0.018
+Val loss after 41 epochs: 0.020
+Train loss after 42 epochs: 0.018
+Val loss after 42 epochs: 0.019
+Train loss after 43 epochs: 0.017
+Val loss after 43 epochs: 0.024
+Train loss after 44 epochs: 0.017
+Val loss after 44 epochs: 0.017
+Train loss after 45 epochs: 0.017
+Val loss after 45 epochs: 0.025
+Train loss after 46 epochs: 0.017
+Val loss after 46 epochs: 0.020
+Train loss after 47 epochs: 0.017
+Val loss after 47 epochs: 0.018
+Train loss after 48 epochs: 0.017
+Val loss after 48 epochs: 0.026
+Train loss after 49 epochs: 0.017
+Val loss after 49 epochs: 0.017
+Train loss after 50 epochs: 0.016
+Val loss after 50 epochs: 0.020
+Train loss after 51 epochs: 0.016
+Val loss after 51 epochs: 0.017
+Train loss after 52 epochs: 0.016
+Val loss after 52 epochs: 0.070
+Train loss after 53 epochs: 0.016
+Val loss after 53 epochs: 0.018
+Train loss after 54 epochs: 0.016
+Val loss after 54 epochs: 0.018
+Train loss after 55 epochs: 0.015
+Val loss after 55 epochs: 0.023
+Train loss after 56 epochs: 0.015
+Val loss after 56 epochs: 0.017
+Train loss after 57 epochs: 0.015
+Val loss after 57 epochs: 0.020
+Train loss after 58 epochs: 0.014
+Val loss after 58 epochs: 0.019
+Train loss after 59 epochs: 0.014
+Val loss after 59 epochs: 0.024
+Train loss after 60 epochs: 0.014
+Val loss after 60 epochs: 0.049
+Train loss after 61 epochs: 0.013
+Val loss after 61 epochs: 0.026
+Train loss after 62 epochs: 0.013
+Val loss after 62 epochs: 0.022
+Train loss after 63 epochs: 0.013
+Val loss after 63 epochs: 0.020
+Train loss after 64 epochs: 0.012
+Val loss after 64 epochs: 0.017
+Train loss after 65 epochs: 0.012
+Val loss after 65 epochs: 0.019
+Train loss after 66 epochs: 0.012
+Val loss after 66 epochs: 0.028
+Train loss after 67 epochs: 0.011
+Val loss after 67 epochs: 0.019
+Train loss after 68 epochs: 0.011
+Val loss after 68 epochs: 0.026
+Train loss after 69 epochs: 0.010
+Val loss after 69 epochs: 0.019
+Train loss after 70 epochs: 0.010
+Val loss after 70 epochs: 0.073
+Train loss after 71 epochs: 0.010
+Val loss after 71 epochs: 0.038
+Train loss after 72 epochs: 0.009
+Val loss after 72 epochs: 0.019
+Train loss after 73 epochs: 0.009
+Val loss after 73 epochs: 0.022
+Train loss after 74 epochs: 0.009
+Val loss after 74 epochs: 0.020
+Train loss after 75 epochs: 0.009
+Val loss after 75 epochs: 0.022
+Train loss after 76 epochs: 0.008
+Val loss after 76 epochs: 0.018
+Train loss after 77 epochs: 0.008
+Val loss after 77 epochs: 0.150
+Train loss after 78 epochs: 0.008
+Val loss after 78 epochs: 0.068
+Train loss after 79 epochs: 0.007
+Val loss after 79 epochs: 0.030
+Train loss after 80 epochs: 0.007
+Val loss after 80 epochs: 0.022
+Train loss after 81 epochs: 0.007
+Val loss after 81 epochs: 0.143
+Train loss after 82 epochs: 0.007
+Val loss after 82 epochs: 0.068
+Train loss after 83 epochs: 0.007
+Val loss after 83 epochs: 0.029
+Train loss after 84 epochs: 0.006
+Val loss after 84 epochs: 0.025
+Train loss after 85 epochs: 0.006
+Val loss after 85 epochs: 0.024
+Train loss after 86 epochs: 0.006
+Val loss after 86 epochs: 0.021
+Train loss after 87 epochs: 0.006
+Val loss after 87 epochs: 0.026
+Train loss after 88 epochs: 0.006
+Val loss after 88 epochs: 0.025
+Train loss after 89 epochs: 0.006
+Val loss after 89 epochs: 0.020
+Train loss after 90 epochs: 0.005
+Val loss after 90 epochs: 0.021
+Train loss after 91 epochs: 0.005
+Val loss after 91 epochs: 0.022
+Train loss after 92 epochs: 0.005
+Val loss after 92 epochs: 0.079
+Train loss after 93 epochs: 0.005
+Val loss after 93 epochs: 0.021
+Train loss after 94 epochs: 0.005
+Val loss after 94 epochs: 0.021
+Train loss after 95 epochs: 0.005
+Val loss after 95 epochs: 0.019
+Train loss after 96 epochs: 0.005
+Val loss after 96 epochs: 0.023
+Train loss after 97 epochs: 0.005
+Val loss after 97 epochs: 0.020
+Train loss after 98 epochs: 0.004
+Val loss after 98 epochs: 0.024
+Train loss after 99 epochs: 0.005
+Val loss after 99 epochs: 0.020
+Train loss after 100 epochs: 0.005
+Val loss after 100 epochs: 0.021
+Train loss after 101 epochs: 0.004
+Val loss after 101 epochs: 0.054
+Train loss after 102 epochs: 0.004
+Val loss after 102 epochs: 0.025
+Train loss after 103 epochs: 0.004
+Val loss after 103 epochs: 0.050
+Train loss after 104 epochs: 0.004
+Val loss after 104 epochs: 0.021
+Train loss after 105 epochs: 0.004
+Val loss after 105 epochs: 0.024
+Train loss after 106 epochs: 0.004
+Val loss after 106 epochs: 0.020
+Train loss after 107 epochs: 0.004
+Val loss after 107 epochs: 0.020
+Train loss after 108 epochs: 0.004
+Val loss after 108 epochs: 0.023
+Train loss after 109 epochs: 0.004
+Val loss after 109 epochs: 0.020
+Train loss after 110 epochs: 0.004
+Val loss after 110 epochs: 0.020
+Train loss after 111 epochs: 0.004
+Val loss after 111 epochs: 0.067
+Train loss after 112 epochs: 0.004
+Val loss after 112 epochs: 0.021
+Train loss after 113 epochs: 0.004
+Val loss after 113 epochs: 0.021
+Train loss after 114 epochs: 0.003
+Val loss after 114 epochs: 0.110
+Train loss after 115 epochs: 0.003
+Val loss after 115 epochs: 0.077
+Train loss after 116 epochs: 0.003
+Val loss after 116 epochs: 0.021
+Train loss after 117 epochs: 0.003
+Val loss after 117 epochs: 0.087
+Train loss after 118 epochs: 0.004
+Val loss after 118 epochs: 0.205
+Train loss after 119 epochs: 0.004
+Val loss after 119 epochs: 0.029
+Train loss after 120 epochs: 0.003
+Val loss after 120 epochs: 0.023
+Train loss after 121 epochs: 0.003
+Val loss after 121 epochs: 0.025
+Train loss after 122 epochs: 0.003
+Val loss after 122 epochs: 0.030
+Train loss after 123 epochs: 0.003
+Val loss after 123 epochs: 0.102
+Train loss after 124 epochs: 0.003
+Val loss after 124 epochs: 0.037
+Train loss after 125 epochs: 0.003
+Val loss after 125 epochs: 0.058
+Train loss after 126 epochs: 0.003
+Val loss after 126 epochs: 0.020
+Train loss after 127 epochs: 0.003
+Val loss after 127 epochs: 0.023
+Train loss after 128 epochs: 0.003
+Val loss after 128 epochs: 0.021
+Train loss after 129 epochs: 0.003
+Val loss after 129 epochs: 0.027
+Train loss after 130 epochs: 0.003
+Val loss after 130 epochs: 0.021
+Train loss after 131 epochs: 0.003
+Val loss after 131 epochs: 0.047
+Train loss after 132 epochs: 0.003
+Val loss after 132 epochs: 0.021
+Train loss after 133 epochs: 0.003
+Val loss after 133 epochs: 0.244
+Train loss after 134 epochs: 0.003
+Val loss after 134 epochs: 0.020
+Train loss after 135 epochs: 0.003
+Val loss after 135 epochs: 0.021
+Train loss after 136 epochs: 0.003
+Val loss after 136 epochs: 0.036
+Train loss after 137 epochs: 0.003
+Val loss after 137 epochs: 0.020
+Train loss after 138 epochs: 0.003
+Val loss after 138 epochs: 0.019
+Train loss after 139 epochs: 0.003
+Val loss after 139 epochs: 0.024
+Train loss after 140 epochs: 0.003
+Val loss after 140 epochs: 0.022
+Train loss after 141 epochs: 0.003
+Val loss after 141 epochs: 0.020
+Train loss after 142 epochs: 0.003
+Val loss after 142 epochs: 0.020
+Train loss after 143 epochs: 0.003
+Val loss after 143 epochs: 0.021
+Train loss after 144 epochs: 0.003
+Val loss after 144 epochs: 0.093
+Train loss after 145 epochs: 0.003
+Val loss after 145 epochs: 0.159
+Train loss after 146 epochs: 0.003
+Val loss after 146 epochs: 0.040
+Train loss after 147 epochs: 0.003
+Val loss after 147 epochs: 0.025
+Train loss after 148 epochs: 0.003
+Val loss after 148 epochs: 0.020
+Train loss after 149 epochs: 0.003
+Val loss after 149 epochs: 0.021
+Train loss after 150 epochs: 0.003
+Val loss after 150 epochs: 0.018
+Model id 215 has the lowest val loss
+--------------------------------------------------------------
+Begin Slurm Epilogue Wed Jun 29 22:49:20 CDT 2022 1656560960
+Name                : Train_dsc_model
+User                : phuc
+Partition           : gpu
+Nodes               : gpu04
+Cores               : 4
+State               : COMPLETED
+Submit              : 2022-06-29T13:56:41
+Start               : 2022-06-29T13:56:42
+End                 : 2022-06-29T22:49:18
+Reserved Walltime   :   17:00:00
+Used Walltime       :   08:52:36
+Used CPU Time       : 1-01:34:42
+% User (Computation): 33.42%
+% System (I/O)      : 66.58%
+Mem Reserved        : 16G
+Max Mem Used        : 3.32G (3560951808.0)
+Max Disk Write      : 1.00G (1078837903.36)
+Max Disk Read       : 4.20T (4.61434124239e+12)
+Max-Mem-Used Node   : gpu04
+Max-Disk-Write Node : gpu04
+Max-Disk-Read Node  : gpu04
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    GPU Performance Statistics
+--------------------------------------------------------------
+GPU Model: Tesla V100S-PCIE-32GB 
+End Slurm Epilogue Wed Jun 29 22:49:20 CDT 2022 1656560960
+--------------------------------------------------------------
