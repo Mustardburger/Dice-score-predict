@@ -1,0 +1,9 @@
+/var/spool/slurm/d/job05977/slurm_script: line 22: activate: No such file or directory
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/phuc/my-code/dsc-predict/generate_data.py", line 263, in <module>
+    dice_dist_for_one_model(model_dir, m, save_dir, data_dir, modalities=modalities, kernel_size=kernel_size_dict[m])
+  File "/mnt/beegfs/home/phuc/my-code/dsc-predict/generate_data.py", line 233, in dice_dist_for_one_model
+    dice_dict = dice_dist_for_one_model_for_one_data(data_dir, model_dir, seg_save_dir, modalities=modalities, kernel_size=kernel_size)
+  File "/mnt/beegfs/home/phuc/my-code/dsc-predict/generate_data.py", line 179, in dice_dist_for_one_model_for_one_data
+    pre1hot = make_one_hot(aug_pred[:, None, :, :], probs.size(1))
+IndexError: too many indices for tensor of dimension 2

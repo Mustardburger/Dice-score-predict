@@ -183,11 +183,11 @@ class Linear(nn.Module):
         x = self.linear(x)
         return self.activation(x)
 
-def get_pretrained_resnet(name_model="resnet50", input_channels=3):
+def get_pretrained_resnet(name_model="resnet50", input_channels=3, pretrained=True):
     """
     Get a pretrained ResNet
     """
-    model = torch.hub.load('pytorch/vision:v0.10.0', name_model, pretrained=True)
+    model = torch.hub.load('pytorch/vision:v0.10.0', name_model, pretrained=pretrained)
     if input_channels != 3:
         weights = model.conv1.weight.clone()
         model.conv1 = nn.Conv2d(4, 64, kernel_size=7, stride=2, padding=3, bias=False)

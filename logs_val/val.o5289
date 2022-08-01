@@ -1,0 +1,43 @@
+--------------------------------------------------------------
+Begin Slurm Prologue Fri Jul 29 12:51:51 CDT 2022 1659117111
+Job ID:		5289
+Username:	phuc
+Partition:	gpu
+End Slurm Prologue Fri Jul 29 12:51:51 CDT 2022 1659117111
+--------------------------------------------------------------
+--------------------------------------------------------------
+Begin Slurm Epilogue Fri Jul 29 12:54:37 CDT 2022 1659117277
+Name                : Val
+User                : phuc
+Partition           : gpu
+Nodes               : gpu09
+Cores               : 4
+State               : COMPLETED
+Submit              : 2022-07-29T12:51:53
+Start               : 2022-07-29T12:51:54
+End                 : 2022-07-29T12:54:38
+Reserved Walltime   : 03:00:00
+Used Walltime       : 00:02:44
+Used CPU Time       : 00:01:01
+% User (Computation): 94.41%
+% System (I/O)      :  5.59%
+Mem Reserved        : 16G
+Max Mem Used        : 3.17G (3398868992.0)
+Max Disk Write      : 20.48K (20971.52)
+Max Disk Read       : 1.78G (1912487280.64)
+Max-Mem-Used Node   : gpu09
+Max-Disk-Write Node : gpu09
+Max-Disk-Read Node  : gpu09
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    GPU Performance Statistics
+--------------------------------------------------------------
+GPU Model: Tesla V100-PCIE-16GB 
+*********************
+*****   gpu09   *****
+*********************
+processor 0 | % GPU Utilization   : Avg: 22, Max: 37, Min: 14
+            | % Memory Utilization: Avg: 2, Max: 4, Min: 1
+            | Max GPU Memory Used : 1.356 GB out of 32 GB
+processor 1 | % GPU Utilization   : Avg: 0, Max: 3, Min: 0
+End Slurm Epilogue Fri Jul 29 12:54:37 CDT 2022 1659117277
+--------------------------------------------------------------

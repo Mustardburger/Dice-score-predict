@@ -1,0 +1,39 @@
+--------------------------------------------------------------
+Begin Slurm Prologue Fri Jul 29 12:59:13 CDT 2022 1659117553
+Job ID:		5291
+Username:	phuc
+Partition:	gpu
+End Slurm Prologue Fri Jul 29 12:59:13 CDT 2022 1659117553
+--------------------------------------------------------------
+--------------------------------------------------------------
+Begin Slurm Epilogue Fri Jul 29 12:59:30 CDT 2022 1659117570
+Name                : Val
+User                : phuc
+Partition           : gpu
+Nodes               : gpu09
+Cores               : 4
+State               : FAILED
+Submit              : 2022-07-29T12:59:15
+Start               : 2022-07-29T12:59:16
+End                 : 2022-07-29T12:59:31
+Reserved Walltime   : 03:00:00
+Used Walltime       : 00:00:15
+Used CPU Time       : 00:00:08
+% User (Computation): 74.20%
+% System (I/O)      : 25.80%
+Mem Reserved        : 16G
+Max Mem Used        : 1.27M (1331200.0)
+Max Disk Write      : 0.00  (0.0)
+Max Disk Read       : 0.00  (0.0)
+Max-Mem-Used Node   : gpu09
+Max-Disk-Write Node : gpu09
+Max-Disk-Read Node  : gpu09
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    GPU Performance Statistics
+--------------------------------------------------------------
+GPU Model: Tesla V100-PCIE-16GB 
+!!! Looks like your job used little GPU resources !!!
+Please check carefully before submitting another GPU job
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+End Slurm Epilogue Fri Jul 29 12:59:30 CDT 2022 1659117570
+--------------------------------------------------------------

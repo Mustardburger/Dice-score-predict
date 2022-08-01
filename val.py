@@ -29,7 +29,7 @@ if __name__ == "__main__":
     DICE_DIR = os.path.join(DATA_DIR, f"{DATASET_ID}/dices_test.pkl")
     BATCH_SIZE = 16
     experiments = {
-        "true_vs_pred_dsc": False, "using_real_seg": False, "shift_experiment": False, "using_mask": True,
+        "true_vs_pred_dsc": False, "using_real_seg": False, "shift_experiment": True, "using_mask": False,
         "visualize_seg": False, "tumor_volume": False, "swap_label": False, "feature_importance": False
     }
 
@@ -45,7 +45,7 @@ if __name__ == "__main__":
     data_transform = DataTransform().get("norm_no_crop")
 
     # Define some objects to pass to the experiments
-    dir_dict = {"VAL_MRI_DIR": VAL_MRI_DIR, "VAL_SEG_DIR": VAL_SEG_DIR, "DICE_DIR": DICE_DIR}
+    dir_dict = {"VAL_MRI_DIR": VAL_MRI_DIR, "VAL_SEG_DIR": VAL_SEG_DIR, "DICE_DIR": DICE_DIR, "VAL_TRUE_DIR": TRUE_SEG_DIR}
     torch_stuff = {"data_transform": data_transform, "device": device, "model": model}
     hyperparams = {"batch_size": BATCH_SIZE}
 

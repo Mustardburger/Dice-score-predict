@@ -193,6 +193,46 @@ def plot_shift_error(err_hori_l, err_verti_l, shift_schedule, img, seg):
     fig.tight_layout()
     plt.savefig("Shift.png")
 
+def plot_shift_segs(mri, true_seg, ori_pred, shifted_seg, dices):
+
+    ncols = 3
+    nrows = 1 + len(shifted_seg) // 3
+    fig, axes = plt.subplots(ncols=ncols, nrows=3)
+
+    mri_processed = process_tensor_for_visualization(mri)
+    axes[0][0].imshow(mri_processed)
+    axes[0][0].set_title("MRI")
+    axes[0][0].set_axis_off()
+
+    true_seg_processed = process_tensor_for_visualization(true_seg)
+    axes[0][1].imshow(true_seg_processed, vmin=0., vmax=3.)
+    axes[0][1].set_title("True seg")
+    axes[0][1].set_axis_off()
+
+    ori_seg_processed = process_tensor_for_visualization(ori_pred)
+    axes[0][2].imshow(ori_seg_processed, vmin=0., vmax=3.)
+    axes[0][2].set_title(f"Orig pred, DSC={dices[0]}")
+    axes[0][2].set_axis_off()
+
+    count = 0
+    for r in range(nrows-1):
+        for c in range(ncols):
+            seg_processed = shifted_seg[count-1]
+            axes[r][c].imshow(seg_processed, vmin=0., vmax=3.)
+            axes[r][c].set_title(f"Shifted, DSC={dices[count]}")
+            axes[r][c].set_axis_off()
+
+    if len(shifted_seg) % 3 == 1:
+        plt.delaxes(axes[nrows-1][-1])
+        plt.delaxes(axes[nrows-1][-2])
+    elif len(shifted_seg) % 3 == 2:
+        plt.delaxes(axes[nrows-1][-1])
+    else:
+        pass
+    
+    plt.tight_layout()
+    plt.savefig("Shifted.png")
+
 
 def plot_multiple_shift_errors(err_hori_l, err_verti_l, shift_schedule):
 

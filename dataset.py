@@ -2,7 +2,8 @@ import torch
 import torch.nn as nn
 from torchvision.io import read_image
 from torchvision import transforms
-from torch.utils.data import DataLoader
+from PIL import Image, ImageOps
+from torch.utils.data import Dataset, DataLoader
 import numpy as np
 import os
 import pickle
@@ -153,6 +154,105 @@ class FinetuneDiceDataset(DiceDataset):
         return (tensor * 0.5) + 0.5
 
 
+# object for segmentation (borrowed from Peijie)
+class BraTsDataset(Dataset):
+    def __init__(self, data_path, split, modality=['T1c'], image_size=256, transform=None, seg=False):
+        #self.base_dir = os.path.join(data_path, split)
+        self.base_dir = data_path
+        self.modality = modality
+        self.fixed_modality = ['T2', 'T1', 'T1c', 'Flair', 'Seg']
+        self.transform = transform
+        self.image_size = image_size
+        self.seg = seg
+        #self.dataset = pd.read_csv(os.path.join(self.base_dir, f'{split}.csv'))
+        self.dataset = sorted(os.listdir(os.path.join(self.base_dir, "Seg")))
+
+    def __getitem__(self, idx):
+        #subject_id = self.dataset.iloc[idx, 0]
+        subject_id = self.dataset[idx]
+        data = self.load_data(subject_id)
+
+        B = data[:len(self.fixed_modality)-1, ...].transpose(1, 2, 0) / 255.
+        B = B.transpose(2, 0, 1)
+        B_shape = (B.shape[1], B.shape[2])
+
+        # in case of missing modalities
+        for i, m in enumerate(self.modality[:-1]):
+            if m == "null":
+                mask = np.zeros(B_shape)
+                B[i] = mask
+
+        truth = np.array(data[-1, ...]) / 85.0  
+        S = truth.astype(np.float32)[np.newaxis, ...]
+
+        if self.seg:
+            flip_axes = self.random_flip_dimensions()
+            B = self.flip_image(B, flip_axes)
+            S = self.flip_image(S, flip_axes)
+
+        # if self.transform:
+        #     # A = self.transform(A)
+        #     B  = self.transform(B)
+        
+        # A = (A - 0.5) / 0.5 
+        # B = (B - 0.5) / 0.5
+
+        return {'B':torch.from_numpy(B.copy()), 'S': torch.from_numpy(S.copy()), 'id':subject_id}
+
+    def flip_image(self, image, axes=(-2, -1)):
+        flipped = np.copy(image)
+        for axis_index in axes:
+            flipped = np.flip(flipped, axis=axis_index)
+       
+        return flipped
+
+    def random_flip_dimensions(self, flip_axes=(-2, -1)):
+        # If n_dimensions = 3, this returns [] or [0] or [0,1] or [0,1,2] etc.
+        axis = list()
+        for flip_axis in flip_axes:
+            if np.random.choice([True, False]):
+                axis.append(flip_axis)
+        return axis
+
+    def __len__(self):
+        return len(self.dataset)
+
+    def load_data(self, subject_id):
+        modalities = np.empty((len(self.fixed_modality), self.image_size, self.image_size), dtype=np.float32)
+        for idx, modal in enumerate(self.fixed_modality):
+            modalities[idx, ...] = self.pad2size(Image.open(os.path.join(self.base_dir, f'{modal}/{subject_id}')))
+
+        return modalities
+
+    def pad2size(self, img):
+        delta_w = abs(img.size[-1] - self.image_size) 
+        delta_h = abs(img.size[-2] - self.image_size)
+        padding = (delta_w//2, delta_h//2, delta_w-(delta_w//2), delta_h-(delta_h//2))
+
+        return ImageOps.expand(img, padding)
+
+
+class SegDataset():
+    def __init__(self, data_dir, modality=['T1c'], batch_size=8, num_workers=0, pin_memory=False, drop_last=True, seg=False):
+
+        self.batch_size = batch_size
+        self.num_workers = num_workers
+        self.pin_memory = pin_memory
+        self.drop_last = drop_last
+
+        train_transforms = transforms.Compose([   
+                            # transforms.Resize(out_size),
+                            transforms.ToTensor(),
+                            transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
+                        ])
+
+        self.train_dataset = BraTsDataset(data_dir, '', modality, seg=seg,
+                                transform=train_transforms)
+
+    def get_train_dataloader(self, shuffle=True):
+        return  DataLoader(self.train_dataset, batch_size=self.batch_size, num_workers=self.num_workers, shuffle=shuffle, pin_memory=self.pin_memory,  drop_last=self.drop_last)
+
+
 def get_dataset_dirs(data_root, dataset_id, run_id):
     subset_train_dir, subset_val_dir = make_subset_dirs(run_id)
     return {
@@ -178,6 +278,9 @@ def get_dataloader(data, batch_size, shuffle=True):
         data, batch_size=batch_size, shuffle=shuffle
     )
 
+
+if __name__ == "__main__":
+    pass
 
 
     

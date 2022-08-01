@@ -1,0 +1,8 @@
+/var/spool/slurm/d/job05290/slurm_script: line 22: activate: No such file or directory
+Using cache found in /home/phuc/.cache/torch/hub/pytorch_vision_v0.10.0
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/phuc/my-code/dsc-predict/val.py", line 76, in <module>
+    shift_experiments(dir_dict, num_images, shift_schedule, torch_stuff)
+  File "/mnt/beegfs/home/phuc/my-code/dsc-predict/tools/valutils.py", line 42, in shift_experiments
+    true_full_dir = os.path.join(dir_dict["VAL_TRUE_DIR"], name_file)
+KeyError: 'VAL_TRUE_DIR'

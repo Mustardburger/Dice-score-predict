@@ -1,0 +1,87 @@
+--------------------------------------------------------------
+Begin Slurm Prologue Fri Jul 29 14:19:12 CDT 2022 1659122352
+Job ID:		5325
+Username:	phuc
+Partition:	gpu
+End Slurm Prologue Fri Jul 29 14:19:12 CDT 2022 1659122352
+--------------------------------------------------------------
+Working on model exp_0
+    Working on dataset val
+    Working on dataset test
+    Working on dataset train
+Working on model exp_1
+    Working on dataset val
+    Working on dataset test
+    Working on dataset train
+Working on model exp_10
+    Working on dataset val
+    Working on dataset test
+    Working on dataset train
+Working on model exp_2
+    Working on dataset val
+    Working on dataset test
+    Working on dataset train
+Working on model exp_3
+    Working on dataset val
+    Working on dataset test
+    Working on dataset train
+Working on model exp_4
+    Working on dataset val
+    Working on dataset test
+    Working on dataset train
+Working on model exp_5
+    Working on dataset val
+    Working on dataset test
+    Working on dataset train
+Working on model exp_6
+    Working on dataset val
+    Working on dataset test
+    Working on dataset train
+Working on model exp_7
+    Working on dataset val
+    Working on dataset test
+    Working on dataset train
+Working on model exp_8
+    Working on dataset val
+    Working on dataset test
+    Working on dataset train
+Working on model exp_9
+    Working on dataset val
+    Working on dataset test
+    Working on dataset train
+--------------------------------------------------------------
+Begin Slurm Epilogue Fri Jul 29 15:14:45 CDT 2022 1659125685
+Name                : Generate_segs
+User                : phuc
+Partition           : gpu
+Nodes               : gpu09
+Cores               : 4
+State               : COMPLETED
+Submit              : 2022-07-29T14:19:15
+Start               : 2022-07-29T14:19:16
+End                 : 2022-07-29T15:14:46
+Reserved Walltime   : 17:00:00
+Used Walltime       : 00:55:30
+Used CPU Time       : 03:18:47
+% User (Computation): 99.51%
+% System (I/O)      :  0.50%
+Mem Reserved        : 32G
+Max Mem Used        : 2.92G (3133698048.0)
+Max Disk Write      : 9.62M (10087301.12)
+Max Disk Read       : 14.05G (15090256445.4)
+Max-Mem-Used Node   : gpu09
+Max-Disk-Write Node : gpu09
+Max-Disk-Read Node  : gpu09
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    GPU Performance Statistics
+--------------------------------------------------------------
+GPU Model: Tesla V100-PCIE-16GB 
+*********************
+*****   gpu09   *****
+*********************
+processor 0 | % GPU Utilization   : Avg: 19, Max: 39, Min: 1
+            | % Memory Utilization: Avg: 1, Max: 5, Min: 0
+            | Max GPU Memory Used : 1.356 GB out of 32 GB
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+End Slurm Epilogue Fri Jul 29 15:14:45 CDT 2022 1659125685
+--------------------------------------------------------------

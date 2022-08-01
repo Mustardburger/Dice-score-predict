@@ -1,0 +1,32 @@
+/var/spool/slurm/d/job05291/slurm_script: line 22: activate: No such file or directory
+Using cache found in /home/phuc/.cache/torch/hub/pytorch_vision_v0.10.0
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:10,  1.16s/it]100%|██████████| 10/10 [00:01<00:00, 10.54it/s]100%|██████████| 10/10 [00:01<00:00,  7.88it/s]
+  0%|          | 0/10 [00:00<?, ?it/s] 90%|█████████ | 9/10 [00:00<00:00, 80.87it/s]100%|██████████| 10/10 [00:00<00:00, 80.30it/s]
+  0%|          | 0/10 [00:00<?, ?it/s] 80%|████████  | 8/10 [00:00<00:00, 79.62it/s]100%|██████████| 10/10 [00:00<00:00, 79.38it/s]
+  0%|          | 0/10 [00:00<?, ?it/s] 90%|█████████ | 9/10 [00:00<00:00, 82.45it/s]100%|██████████| 10/10 [00:00<00:00, 81.80it/s]
+  0%|          | 0/10 [00:00<?, ?it/s] 90%|█████████ | 9/10 [00:00<00:00, 82.31it/s]100%|██████████| 10/10 [00:00<00:00, 81.83it/s]
+  0%|          | 0/10 [00:00<?, ?it/s] 90%|█████████ | 9/10 [00:00<00:00, 82.29it/s]100%|██████████| 10/10 [00:00<00:00, 81.81it/s]
+  0%|          | 0/10 [00:00<?, ?it/s] 90%|█████████ | 9/10 [00:00<00:00, 82.14it/s]100%|██████████| 10/10 [00:00<00:00, 81.58it/s]
+  0%|          | 0/10 [00:00<?, ?it/s] 90%|█████████ | 9/10 [00:00<00:00, 82.36it/s]100%|██████████| 10/10 [00:00<00:00, 81.74it/s]
+  0%|          | 0/10 [00:00<?, ?it/s] 90%|█████████ | 9/10 [00:00<00:00, 82.20it/s]100%|██████████| 10/10 [00:00<00:00, 81.72it/s]
+  0%|          | 0/10 [00:00<?, ?it/s] 90%|█████████ | 9/10 [00:00<00:00, 82.21it/s]100%|██████████| 10/10 [00:00<00:00, 81.67it/s]
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/phuc/my-code/dsc-predict/val.py", line 76, in <module>
+    shift_experiments(dir_dict, num_images, shift_schedule, torch_stuff)
+  File "/mnt/beegfs/home/phuc/my-code/dsc-predict/tools/valutils.py", line 81, in shift_experiments
+    plot_shift_segs(mri, true_seg, ori_seg, shifted_list, dices)
+  File "/mnt/beegfs/home/phuc/my-code/dsc-predict/tools/vizutils.py", line 221, in plot_shift_segs
+    axes[r][c].imshow(seg_processed, vmin=0., vmax=3.)
+  File "/home/phuc/anaconda3/envs/pytorch-env/lib/python3.10/site-packages/matplotlib/_api/deprecation.py", line 459, in wrapper
+    return func(*args, **kwargs)
+  File "/home/phuc/anaconda3/envs/pytorch-env/lib/python3.10/site-packages/matplotlib/__init__.py", line 1412, in inner
+    return func(ax, *map(sanitize_sequence, args), **kwargs)
+  File "/home/phuc/anaconda3/envs/pytorch-env/lib/python3.10/site-packages/matplotlib/axes/_axes.py", line 5481, in imshow
+    im.set_data(X)
+  File "/home/phuc/anaconda3/envs/pytorch-env/lib/python3.10/site-packages/matplotlib/image.py", line 702, in set_data
+    self._A = cbook.safe_masked_invalid(A, copy=True)
+  File "/home/phuc/anaconda3/envs/pytorch-env/lib/python3.10/site-packages/matplotlib/cbook/__init__.py", line 701, in safe_masked_invalid
+    x = np.array(x, subok=True, copy=copy)
+  File "/home/phuc/anaconda3/envs/pytorch-env/lib/python3.10/site-packages/torch/_tensor.py", line 732, in __array__
+    return self.numpy()
+TypeError: can't convert cuda:0 device type tensor to numpy. Use Tensor.cpu() to copy the tensor to host memory first.

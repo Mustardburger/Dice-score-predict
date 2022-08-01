@@ -24,6 +24,11 @@ def shift_experiments(dir_dict, num_images, shift_schedule, torch_stuff):
     with open(dir_dict["DICE_DIR"], "rb") as f:
         dice_dict = pickle.load(f)
 
+    shifted_list = []
+    dices = []
+    mri = None
+    true_seg, ori_seg = None, None
+
     model.eval()
     with torch.no_grad():
         for name_file in name_files:
@@ -32,17 +37,25 @@ def shift_experiments(dir_dict, num_images, shift_schedule, torch_stuff):
             name_img = "Epoch" + epoch + "_Img" + id + ".pt"
             name_dice = "Epoch" + epoch + "-" + id
             true_dsc = dice_dict[name_dice]
+            dices.append(true_dsc)
             seg_full_dir = os.path.join(dir_dict["VAL_SEG_DIR"], name_file)
+            true_full_dir = os.path.join(dir_dict["VAL_TRUE_DIR"], name_file)
             img_full_dir = os.path.join(dir_dict["VAL_MRI_DIR"], name_img)
         
             seg = torch.load(seg_full_dir).to(torch_stuff["device"])
             img = torch.load(img_full_dir).to(torch_stuff["device"])
+            true = torch.load(true_full_dir).to(torch_stuff["device"])
+
             if torch_stuff["data_transform"]:
                 img = (img * 0.5) + 0.5
                 img = torch_stuff["data_transform"](img)
 
             if len(img.size()) == 3: img = torch.unsqueeze(img, dim=0)
             if len(seg.size()) == 3: seg = torch.unsqueeze(seg, dim=0)
+            
+            mri = img
+            ori_seg = seg
+            true_seg = true
             
             for roll in tqdm(shift_schedule):
                 seg_rolled_hori = torch.roll(seg, roll, 2)
@@ -54,13 +67,18 @@ def shift_experiments(dir_dict, num_images, shift_schedule, torch_stuff):
                 pred_verti = torch_stuff["model"](input_verti)[0].item()
                 #err_hori_l.append(abs(pred_hori - true_dsc))
                 #err_verti_l.append(abs(pred_verti - true_dsc))
+                shifted_list.append(seg_rolled_hori)
+                shifted_list.append(seg_rolled_verti)
+                dices.append(pred_hori)
+                dices.append(pred_verti)
                 ehl.append(abs(pred_hori - true_dsc))
                 evl.append(abs(pred_verti - true_dsc))
             err_hori_l.append(ehl)
             err_verti_l.append(evl)
 
     #plot_multiple_shift_errors(err_hori_l, err_verti_l, shift_schedule)
-    plot_shift_error(err_hori_l, err_verti_l, shift_schedule, img, seg)
+    #plot_shift_error(err_hori_l, err_verti_l, shift_schedule, img, seg)
+    plot_shift_segs(mri, true_seg, ori_seg, shifted_list, dices)
 
 
 def swap_label_experiment(label_swap_dict, data_dir, torch_stuff):
